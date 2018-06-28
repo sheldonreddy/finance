@@ -4,6 +4,6 @@
 
 #### Implemented in Python, MATLAB, C, C++, C#
 
-####### Concepts:
+######    Concepts:
           1. Interest
           2. Risk-Adjusted-Return
