@@ -1,5 +1,15 @@
 # Finance
 
+Exploring the world of finance.
+
+######    Branches:
+          1. Master : Completed, Tested, Verified
+          2. Dev    : In progress. Use at your own risk!
+
+######    Contents:
+          1. Code Projects
+          2. Resources & Documentation
+
 ######    Languages:
           1. Python
           2. MATLAB
@@ -11,3 +21,5 @@
 ######    Concepts:
           1. Interest
           2. Risk-Adjusted-Return
+         
+     
