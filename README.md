@@ -1,9 +1,8 @@
 # Finance
 
+## All things Finance. 
 
-All things Finance. 
-
-Implemented in Python
+Implemented in Python, MATLAB, C, C++, C#
 
 Concepts:
 1. Risk-Adjusted-Return
