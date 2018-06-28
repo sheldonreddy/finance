@@ -1,3 +1,10 @@
+% -------------------------------------------------------------------------
+%   Author:         Sheldon Reddy
+%   Decription:     Interest Calculations with Amortization Schedule
+%   
+%   Instructions:   Run each section by clicking on it + CTRL + ENTER
+% -------------------------------------------------------------------------
+
 %% Simple Interest
 I = 0;          %Interest Earned
 P = 10000;      %Principal
@@ -6,6 +13,7 @@ t = 3;          %Term (years)
 
 format bank
 I = P*r*t
+
 
 %% Compound Interest
 A = 0;         %Future Value
@@ -19,6 +27,7 @@ disp("Total After Investment")
 A = P*(1+(r/n))^(n*t)
 disp("Return on Investment")
 B = A - P
+
 %% Loan Repayment/ Installment
 A = 0;          %Installment
 P = 31000;      %Principal
