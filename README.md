@@ -1,7 +1,5 @@
 # Finance
 
-### All things Finance. 
-
 ######    Languages:
           1. Python
           2. MATLAB
