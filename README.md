@@ -1,6 +1,6 @@
 # Finance
 
-## All things Finance. 
+All things Finance. 
 
 Implemented in Python, MATLAB, C, C++, C#
 
