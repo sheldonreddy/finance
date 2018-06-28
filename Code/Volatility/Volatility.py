@@ -1,19 +1,18 @@
-# Computational investing with Python
-# Measures of Risk Adjusted Return
-# Source: http://www.turingfinance.com/computational-investing-with-python-week-one/
-# Implements the following classes:
-#                                       1. Volatility
-#                                       2. Expected Shortfall (Errors)
+# Author:               Sheldon Reddy
+# Description:          Computational investing with Python
+#                       Measures of Risk Adjusted Return
+#						Python 3, PyCharm IDE 
+#
+# Classes:
+#                       1. Volatility
 # Resources:
-#               1. seaborn Plots: https://seaborn.pydata.org/tutorial/distributions.html
-
+#                       1. Source: http://www.turingfinance.com/computational-investing-with-python-week-one/
+#                       2. Seaborn Plots: https://seaborn.pydata.org/tutorial/distributions.html
 
 # Imports
 import numpy
 import numpy.random as nrand
-import matplotlib.pyplot as plt
 import scipy.stats as stats
-import scipy.integrate as int
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -29,17 +28,14 @@ class Volatility:
     def arrange(self, returns):
         return numpy.sort(returns)
 
-
     # Calculate mean
     def avg(self, returns):
         return numpy.mean(returns)
-
 
     # Calculate Probability Density Function
     def pdf(self, returns):
         pdf = stats.norm.pdf(returns, self.avg(returns), self.vol(returns))
         return pdf
-
 
     # Plot the Distribution Curve using MatPlotLib
     def plotdistribution(self, returns):
@@ -64,7 +60,6 @@ class Volatility:
     def vol(self, returns):
         return numpy.std(returns)
 
-
     # Calculate beta
     # Measure the relationship between the security returns and the market.
     # Higher the beta - higher the risk and V.V
@@ -75,44 +70,23 @@ class Volatility:
         return numpy.cov(m)[0][1] / numpy.std(market)
 
 
-class ExpectedShortfall:
-
-    def __init__(self, returns):
-        self.returns = returns
-
-    def var(self, alpha):
-        # This method calculates the historical simulation var of the returns
-        sorted_returns = numpy.sort(self.returns)
-        # Calculate the index associated with alpha
-        index = int(alpha * len(sorted_returns))
-        # VaR should be positive
-        return abs(sorted_returns[index])
-
-    def cvar(self, alpha):
-        # This method calculates the condition VaR of the returns
-        sorted_returns = numpy.sort(self.returns)
-        # Calculate the index associated with alpha
-        index = int(alpha * len(sorted_returns))
-        # Calculate the total VaR beyond alpha
-        sum_var = sorted_returns[0]
-        for i in range(1, index):
-            sum_var += sorted_returns[i]
-        # Return the average VaR
-        # CVaR should be positive
-        return abs(sum_var / index)
-
-
 # Volatility Operations
-volObj = Volatility(0)           # Volatility Object Instantiation
+
+# Volatility Object Instantiation
+volObj = Volatility(0)
+
+# Random Distributions for testing
 r = nrand.uniform(-1, 1, 50)
 m = nrand.uniform(-1, 1, 50)
+
+# Display
 print("vol =", volObj.vol(r))
 print("beta =", volObj.beta(r, m))
-# volObj.plotdistribution(r)
+
+# Plots
+
+# Seaborn Plots
 volObj.snsplotdistribution(r)
 
-# ExpectedShortfall Operations
-r = nrand.uniform(-1, 1, 50)
-esObj = ExpectedShortfall(r)
-print("VaR(0.05) =", esObj.var(0.05))
-print("CVaR(0.05) =", esObj.cvar(0.05))
+# MatplotLib
+# volObj.plotdistribution(r)
