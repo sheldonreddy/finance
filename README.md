@@ -1,11 +1,5 @@
 # Finance
 
-### My journey through the world of Finance.
-
-######    Contents:
-          1. Code Projects
-          2. Resources & Documentation
-
 ######    Languages:
           1. Python
           2. MATLAB
@@ -17,4 +11,3 @@
 ######    Concepts:
           1. Interest
           2. Risk-Adjusted-Return
-
