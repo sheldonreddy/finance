@@ -20,6 +20,9 @@ Exploring the world of finance.
 
 ######    Concepts:
           1. Interest
-          2. Risk-Adjusted-Return
+          2. Volatility
+          3. Sharpe Ratio
+          4. Exploratory Analysis 
+          5. AlphaVantage
          
      
